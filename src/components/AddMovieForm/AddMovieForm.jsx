@@ -5,11 +5,25 @@ function AddMovieForm() {
 
     // title/rating = värdena(datan som användaren angivit)
     // setTitle/setRating = funktioner som uppdaterar värdena
-    const [title, setTitle] = usestate("");
-    const [rating, setRating] = usestate("0");
+    const [title, setTitle] = useState("");
+    const [rating, setRating] = useState("0");
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        if (title === "" || rating === "0") {
+            alert("Fyll i både titel och betyg");
+            return;
+        }
+
+        const movie = {
+            title: title,
+            rating: rating
+        };
+    }
     
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <fieldset>
 
                 <legend>Läg till en film</legend>
