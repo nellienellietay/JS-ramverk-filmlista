@@ -34,4 +34,5 @@ function App() {
   );
 }
 
+// Gör så att app-komponenten kan användas i andra filer
 export default App;
