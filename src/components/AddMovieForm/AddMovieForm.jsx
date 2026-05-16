@@ -1,0 +1,29 @@
+// komponent för formuläret där användaren till en film
+function AddMovieForm() {
+    
+    return (
+        <form>
+            <fieldset>
+
+                <legend>Läg till en film</legend>
+                <label htmlFor="title-field">Titel:</label>
+                <input type= "text" id="title-field" className="form-control"/>
+
+                <label htmlFor="rating-field">Betyg:</label>
+                <select id="rating-field" calssName="form-control">
+
+                    <option value="0">Välj betyg här</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <input type="submit" className="btn btn-success mt-3" value="Spara film"/>
+            </fieldset>
+        </form>
+    );
+}
+
+export default AddMovieForm;

@@ -1,3 +1,4 @@
+import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
 import "./App.css";
 
 function App() {
@@ -6,30 +7,10 @@ function App() {
     <div className="container">
       <h1>Min filmlista</h1>
 
-      <form>
-        <fieldset>
-          <legend>
-            Lägg till en film
-          </legend>
+      {/* denna refererar till addmovieform komoneneten vi redan 
+      skapat så detta visar att allt som finns i en andra filen ska ligga här */}
+      <AddMovieForm />
 
-          <label htmlFor="title-field">Titel:</label>
-
-          <input type="text" id="title-field" className="form-control"/>
-
-          <label htmlFor="rating-field">Betyg:</label>
-
-          <select id="rating-field" className="form-control">
-            <option value="0">Välj betyg här</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-
-          <input type="submit" className="btn btn-success mt-3" value="Spara film"/>
-        </fieldset>
-      </form>
     </div>
   );
 }
