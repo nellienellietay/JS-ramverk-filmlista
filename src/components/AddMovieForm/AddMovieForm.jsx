@@ -1,5 +1,12 @@
 // komponent för formuläret där användaren till en film
+import { useState } from "react";
+
 function AddMovieForm() {
+
+    // title/rating = värdena(datan som användaren angivit)
+    // setTitle/setRating = funktioner som uppdaterar värdena
+    const [title, setTitle] = usestate("");
+    const [rating, setRating] = usestate("0");
     
     return (
         <form>
@@ -7,10 +14,10 @@ function AddMovieForm() {
 
                 <legend>Läg till en film</legend>
                 <label htmlFor="title-field">Titel:</label>
-                <input type= "text" id="title-field" className="form-control"/>
+                <input type= "text" id="title-field" className="form-control" value={title} onChange={(event) => setTitle(event.target.value)}/>
 
                 <label htmlFor="rating-field">Betyg:</label>
-                <select id="rating-field" className="form-control">
+                <select id="rating-field" className="form-control" value={rating} onChange={(event) => setRating(event.target.value)} >
 
                     <option value="0">Välj betyg här</option>
                     <option value="1">1</option>
