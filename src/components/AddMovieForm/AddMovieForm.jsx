@@ -10,7 +10,7 @@ function AddMovieForm() {
                 <input type= "text" id="title-field" className="form-control"/>
 
                 <label htmlFor="rating-field">Betyg:</label>
-                <select id="rating-field" calssName="form-control">
+                <select id="rating-field" className="form-control">
 
                     <option value="0">Välj betyg här</option>
                     <option value="1">1</option>
