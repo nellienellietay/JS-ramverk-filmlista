@@ -1,7 +1,16 @@
+import { useState } from "react";
 import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
 import "./App.css";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
+  function addMovie(movie) {
+    setMovies((previousMovies) => [
+      ...previousMovies,
+      movie
+    ]);
+  }
 
   return (
     <div className="container">
@@ -9,7 +18,7 @@ function App() {
 
       {/* denna refererar till addmovieform komoneneten vi redan 
       skapat så detta visar att allt som finns i en andra filen ska ligga här */}
-      <AddMovieForm />
+      <AddMovieForm addMovie={addMovie} />
 
     </div>
   );
