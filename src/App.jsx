@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
+import Sorting from "./components/Sorting/Sorting";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,22 @@ function App() {
       movie
     ]);
   }
+  function sortByTitle() {
+    const sortedMovies = [...movies].sort((a, b) =>
+      a.title.localeCompare(b.title)
+    );
+  
+    setMovies(sortedMovies);
+  }
+  
+  function sortByRating() {
+    const sortedMovies = [...movies].sort((a, b) =>
+      Number(b.rating) - Number(a.rating)
+    );
+  
+    setMovies(sortedMovies);
+  }
+
 
   return (
     <div className="container">
@@ -19,6 +36,7 @@ function App() {
       {/* denna refererar till addmovieform komoneneten vi redan 
       skapat så detta visar att allt som finns i en andra filen ska ligga här */}
       <AddMovieForm addMovie={addMovie} />
+      <Sorting sortByTitle={sortByTitle} sortByRating={sortByRating} />
 
     </div>
   );
