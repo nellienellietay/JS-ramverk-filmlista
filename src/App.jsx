@@ -1,7 +1,6 @@
 import { useState } from "react";
 import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
 import Sorting from "./components/Sorting/Sorting";
-import Sorting from "./components/Sorting/Sorting";
 import "./App.css";
 
 function App() {
