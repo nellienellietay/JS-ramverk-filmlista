@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
+import List from "./components/List/List";
 import "./App.css";
 
 function App() {
