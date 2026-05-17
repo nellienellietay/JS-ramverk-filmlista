@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddMovieForm from "./components/AddMovieForm/AddMovieForm";
+import List from "./components/List/List";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
       movie
     ]);
   }
+  function deleteMovie(indexToDelete) {
+    setMovies(movies.filter((movie, index) => index !== indexToDelete));
+  }
 
   return (
     <div className="container">
@@ -19,6 +23,7 @@ function App() {
       {/* denna refererar till addmovieform komoneneten vi redan 
       skapat så detta visar att allt som finns i en andra filen ska ligga här */}
       <AddMovieForm addMovie={addMovie} />
+      <List movies={movies} deleteMovie={deleteMovie} />
 
     </div>
   );
