@@ -36,7 +36,7 @@ function AddMovieForm({ addMovie }) {
                 <input type= "text" id="title-field" className="form-control" placeholder="Skriv din filmtitel här..."value={title} onChange={(event) => setTitle(event.target.value)}/>
 
                 <label htmlFor="rating-field">Betyg:</label>
-                <select id="rating-field" className="form-control" value={rating} onChange={(event) => setRating(event.target.value)} >
+                <select id="rating-field" className={`form-control ${rating === "0" ? "placeholder-colour" : ""}`} value={rating} onChange={(event) => setRating(event.target.value)} >
 
                     <option value="0">Välj betyg här...</option>
                     <option value="1">1</option>
