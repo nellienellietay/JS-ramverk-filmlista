@@ -30,7 +30,7 @@ function AddMovieForm({ addMovie }) {
         <form onSubmit={handleSubmit}>
             <fieldset>
 
-                <legend>Läg till en film</legend>
+                <legend>Lägg till en film</legend>
                 <label htmlFor="title-field">Titel:</label>
                 <input type= "text" id="title-field" className="form-control" placeholder="Skriv din filmtitel här..."value={title} onChange={(event) => setTitle(event.target.value)}/>
 
