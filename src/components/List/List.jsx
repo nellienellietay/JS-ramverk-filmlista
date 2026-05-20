@@ -9,4 +9,4 @@ function MovieList({ movies, deleteMovie }) {
   );
 }
 
-export default List;
+export default MovieList;
