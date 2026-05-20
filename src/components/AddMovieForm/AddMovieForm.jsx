@@ -1,10 +1,8 @@
-// komponent för formuläret där användaren till en film
 import { useState } from "react";
 
 function AddMovieForm({ addMovie }) {
 
-    // title/rating = värdena(datan som användaren angivit)
-    // setTitle/setRating = funktioner som uppdaterar värdena
+    // State används här för att hålla reda på det användaren skriver och väljer i formuläret.
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState("0");
 
@@ -21,6 +19,7 @@ function AddMovieForm({ addMovie }) {
             rating: rating
         };
 
+        // Här skickas den nya filmen till addMovie funktionen där filmlistan uppdateras.
         addMovie(movie);
 
         setTitle("");

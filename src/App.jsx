@@ -5,8 +5,10 @@ import List from "./components/List/List";
 import "./App.css";
 
 function App() {
+  // Filmerna sparas i App så att samma lista kan användas och uppdateras av olika komponenter.
   const [movies, setMovies] = useState([]);
 
+  // Lägger till filmen som skickas från formuläret i den befintliga filmlistan.
   function addMovie(movie) {
     setMovies((previousMovies) => [
       ...previousMovies,
@@ -37,8 +39,6 @@ function App() {
     <div className="container">
       <h1>Min filmlista</h1>
 
-      {/* denna refererar till addmovieform komoneneten vi redan 
-      skapat så detta visar att allt som finns i en andra filen ska ligga här */}
       <AddMovieForm addMovie={addMovie} />
       <Sorting sortByTitle={sortByTitle} sortByRating={sortByRating} />
       <List movies={movies} deleteMovie={deleteMovie} />
@@ -47,5 +47,4 @@ function App() {
   );
 }
 
-// Gör så att app-komponenten kan användas i andra filer
 export default App;
